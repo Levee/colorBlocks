@@ -1,12 +1,12 @@
 body {
   margin: 0;
+  background-color: #ffffff;
 }
 
 header, h1 {
   padding: 5px;
   margin: 0;
-  background-color: paleturquoise;
-  color: burlywood;
+  background-color: #1d1f20;
 }
 
 .color0 {
@@ -39,4 +39,45 @@ header, h1 {
   margin: 5px;
   background-color: blue;
   display: inline-block;
+}
+
+
+
+html {
+	background: #1d1f20;
+}
+.header {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+  
+  background-clip: text;
+	fill: transparent;
+  animation: hue 10s infinite linear;
+  
+  -webkit-background-clip: text;
+	-webkit-fill: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
 }
