@@ -1,6 +1,56 @@
+#btnZone {
+  text-align: center;
+}
+
+#boxes {
+  text-align: center;
+}
+
+.box {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #000;
+  border-bottom: 4px solid #000;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.box:hover {
+  filter: brightness(80%);
+  cursor: pointer;
+}
+
+.red {
+  background-color: #ff0000;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+.green {
+  background-color: #008000;
+}
+
+.blue {
+  background-color: #0000ff;
+}
+
+#cntZone, #btnZone {
+  display: inline-block;
+  margin: 16px;
+}
+
+#btnZone button {
+  display: block;
+  margin: 16px 0;
+}
+
 body {
   margin: 0;
   background-color: #ffffff;
+  text-align: center;
 }
 
 header, .header {
@@ -9,40 +59,9 @@ header, .header {
   background-color: #1d1f20;
 }
 
-.color0 {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  background-color: red;
-  display: inline-block;
-}
-
-.color1 {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  background-color: yellow;
-  display: inline-block;
-}
-
-.color2 {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  background-color: green;
-  display: inline-block;
-}
-
-.color3 {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  background-color: blue;
-  display: inline-block;
-}
-
 html {
-	background: #1d1f20;
+  background: #1d1f20;
+  user-select: none;
 }
 
 .header {
