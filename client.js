@@ -3,34 +3,46 @@ $(readyNow);
 function readyNow(){
   console.log('js');
   $('#btnZone button').click(addBlock);
+  refreshCount();
+  delBlock();
+
+  addBlock('addRed');
+  addBlock('addYellow');
+  addBlock('addGreen');
+  addBlock('addBlue');
 }
 
-function addGreenBox(){
-  $('#boxes').append('<div class="green box"></div>');
-}
+function addBlock(param1){
+  // param1 can either be `event` if this was clicked
+  // if it isnt, it could be a string of the id we want
+  // to pretend we clicked on
 
-function addBlueBox(){
-  $('#boxes').append('<div class="blue box"></div>');
-}
-
-function addBlock(){
-  let id = this.id;
+  let id;
+  if (typeof(param1) === 'string') {
+    // we passed in an id manually!
+    id = param1;
+  } else {
+    // its an event probably!
+    id = this.id;
+  }
+  // let id = this.id;
   if (id === 'addRed') {
     $('#boxes').append('<div class="red box"></div>');
-    delBlock();
+    refreshCount();
   }
   else if (id === 'addYellow') {
     $('#boxes').append('<div class="yellow box"></div>');
-    delBlock();
+    refreshCount();
   }
   else if (id === 'addGreen') {
     $('#boxes').append('<div class="green box"></div>');
-    delBlock();
+    refreshCount();
   }
   else if (id === 'addBlue') {
     $('#boxes').append('<div class="blue box"></div>');
-    delBlock();
+    refreshCount();
   }
+  delBlock();
 }
 
 function refreshCount(){
@@ -48,10 +60,11 @@ function delBlock(){
   $('.box').click(function (event) {
     let el = event.target;
     $(el).remove();
+    refreshCount();
   });
 }
 
-$('.boxes').on('click', 'div.box', function(){
-  $(this).remove();
+// $('.boxes').on('click', 'div.box', function(){
+//   $(this).remove();
 
-});
+// });
